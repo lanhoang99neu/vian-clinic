@@ -33,6 +33,14 @@ export const HomePage = () => {
     fetchData();
   }, []);
 
+  if (!homeData || !clinicData) {
+    return (
+      <div className="min-h-[calc(100vh-80px)] flex items-center justify-center bg-surface">
+        <div className="w-12 h-12 border-4 border-[#8B1A2A]/20 border-t-[#8B1A2A] rounded-full animate-spin"></div>
+      </div>
+    );
+  }
+
   const defaultTestimonials = [
     { rating: 5, text: "Liệu trình điều trị mụn tại đây thực sự đã thay đổi cuộc sống của tôi. Các bác sĩ tại Vian Skin Clinic không chỉ giỏi chuyên môn mà còn rất tận tâm theo sát kết quả.", name: "Minh Anh N.", avatarInitial: "M" },
     { rating: 4.5, text: "Công nghệ trẻ hóa da bằng laser rất tuyệt vời. Tôi thấy sự khác biệt rõ rệt chỉ sau 2 buổi điều trị. Không gian phòng khám sang trọng và thư giãn.", name: "Lan Hương T.", avatarInitial: "L" },
