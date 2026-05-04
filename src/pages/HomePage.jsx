@@ -61,13 +61,13 @@ export const HomePage = () => {
     <main>
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-surface py-20 md:py-32">
-        <div className="max-w-[1200px] mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-[1200px] mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-12 items-center">
           <div className="max-w-xl z-10">
             <div className="mb-6">
               <h2 className="text-[#8B1A2A] font-bold tracking-[0.2em] text-base md:text-lg mb-2 uppercase">
                 {homeData?.heroSubtitle || "PHÒNG KHÁM CHUYÊN KHOA DA LIỄU"}
               </h2>
-              <h1 className="font-serif text-5xl md:text-[64px] font-bold text-[#1A1A1A] mb-6 leading-tight">
+              <h1 className="font-serif text-4xl md:text-[64px] font-bold text-[#1A1A1A] mb-6 leading-tight">
                 {homeData?.heroTitle || "Vian Skin Clinic"}
               </h1>
               <div className="w-24 h-[2px] bg-[#8B1A2A]/30 mb-6"></div>
@@ -92,7 +92,7 @@ export const HomePage = () => {
             <img 
               src={homeData?.heroImageUrl || "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop"} 
               alt={homeData?.heroTitle || "Dermatology Clinic"} 
-              className="relative rounded-[2rem] shadow-xl w-full h-[600px] object-cover"
+              className="relative rounded-[2rem] shadow-xl w-full h-72 md:h-[600px] object-contain md:object-cover"
             />
           </div>
         </div>
@@ -100,7 +100,7 @@ export const HomePage = () => {
 
       {/* Features / Why Choose Us Section */}
       <section className="py-20 bg-surface">
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="max-w-[1200px] mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h3 className="text-primary font-bold tracking-[0.2em] text-sm mb-4 uppercase">{homeData?.aboutSubtitle || "VỀ VIAN SKIN CLINIC"}</h3>
             <h2 className="font-serif text-4xl font-bold text-on-surface mb-4">{homeData?.aboutTitle || "Kinh nghiệm lâm sàng trong thẩm mỹ y khoa"}</h2>
@@ -123,7 +123,7 @@ export const HomePage = () => {
 
       {/* Services Preview */}
       <section className="py-24 bg-surface-container-low">
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="max-w-[1200px] mx-auto px-4 md:px-6">
           <div className="flex justify-between items-end mb-16">
             <div className="max-w-2xl">
               <h2 className="font-serif text-4xl font-bold mb-4 text-on-surface">{homeData?.servicesPreviewTitle || "Giải pháp toàn diện cho sức khỏe làn da"}</h2>
@@ -169,7 +169,7 @@ export const HomePage = () => {
       
       {/* Testimonials */}
       <section className="py-24 bg-[#8B1A2A] text-center">
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="max-w-[1200px] mx-auto px-4 md:px-6">
           <h2 className="font-serif text-4xl font-bold mb-16 text-on-primary uppercase">{homeData?.testimonialsTitle || "NIỀM TIN TỪ KHÁCH HÀNG"}</h2>
           <div className="grid md:grid-cols-3 gap-8 text-left">
             {testimonials.map((testimonial, index) => (
@@ -204,7 +204,7 @@ export const HomePage = () => {
 
       {/* Contact Section */}
       <section className="py-24 bg-surface">
-        <div className="max-w-[1200px] mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-[1200px] mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h3 className="text-[#8B1A2A] font-bold tracking-[0.2em] text-sm mb-4 uppercase">{homeData?.contactSectionLabel || 'THÔNG TIN LIÊN HỆ'}</h3>
             <h2 className="font-serif text-4xl font-bold mb-6 text-on-surface">{homeData?.contactSectionTitle || 'Đồng hành cùng bạn trên chặng đường chăm sóc da'}</h2>
